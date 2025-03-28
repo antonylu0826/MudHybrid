@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "方案項目", "方案項目", "{8DDC4786-5FC8-F15C-1CA5-9F41FD4BEB75}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
+		show.jpg = show.jpg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MudHybrid.Shared", "src\MudHybrid.Shared\MudHybrid.Shared.csproj", "{9019C7BD-D6AB-9E31-A808-71A30CE3A025}"

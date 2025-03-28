@@ -1,5 +1,7 @@
 # MudHybrid Template
 
+![img](show.jpg)
+
 ## Description
 MudHybrid Template is a .NET MAUI and Blazor project template that provides a hybrid application framework. It leverages MudBlazor for UI components and supports both web and native platforms.
 
@@ -11,22 +13,8 @@ MudHybrid Template is a .NET MAUI and Blazor project template that provides a hy
 - Responsive layout with MudLayout, MudAppBar, MudDrawer, and MudMainContent
 
 ## Installation
-1. Clone the repository:
-   
-2. Install the required .NET SDK:
-   
-3. Restore the project dependencies:
-   
-4. Build the project:
-   
-5. Run the project:
-   
-## Usage
-- To run the application on different platforms, use the following commands:
-  - Android: `dotnet build -t:Run -f net9.0-android`
-  - iOS: `dotnet build -t:Run -f net9.0-ios`
-  - MacCatalyst: `dotnet build -t:Run -f net9.0-maccatalyst`
-  - Windows: `dotnet build -t:Run -f net9.0-windows10.0.19041.0`
+You can install the VSIX from the Visual Studio Marketplace using the following link:
+[Visual Studio Marketplace - MudHybrid VSIX](https://marketplace.visualstudio.com/items?itemName=AntonyLu.321)
 
 ## Contributing
 We welcome contributions! Please follow these steps to contribute:
