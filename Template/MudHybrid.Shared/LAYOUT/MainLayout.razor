@@ -1,0 +1,59 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider @bind-IsDarkMode="@IsDarkMode" />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Elevation="0" Dense="true">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@DrawerToggle" />
+        <MudText Typo="Typo.h5" Class="ml-3">Application</MudText>
+        <MudSpacer />
+
+        <DarkModeSwitch OnDarkModeChanged="OnDarkModeChanged" />
+
+    </MudAppBar>
+    <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
+        
+        <NavMenu />
+
+    </MudDrawer>
+    <MudMainContent Class="mt-16 pa-4">
+
+        @Body
+
+        <MudScrollToTop>
+            <MudFab Color="Color.Primary" StartIcon="@Icons.Material.Filled.ArrowUpward" />
+        </MudScrollToTop>
+    </MudMainContent>
+</MudLayout>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>
+
+@code {
+    #region darkmode switch
+
+    public bool IsDarkMode { get; set; }
+
+    private void OnDarkModeChanged(bool isDarkMode)
+    {
+        IsDarkMode = isDarkMode;
+    }
+
+    #endregion
+
+    #region drawer
+
+    private bool _drawerOpen = true;
+    private void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    #endregion
+}

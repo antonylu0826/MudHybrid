@@ -1,0 +1,64 @@
+﻿@if (IsDarkMode)
+{
+    <MudIconButton Icon="@Icons.Material.Filled.LightMode"
+                   Color="Color.Inherit"
+                   Edge="Edge.Start"
+                   OnClick="@(() => SetThemeMode(false))" />
+}
+else
+{
+    <MudIconButton Icon="@Icons.Material.Filled.DarkMode"
+                   Color="Color.Inherit"
+                   Edge="Edge.Start"
+                   OnClick="@(() => SetThemeMode(true))" />
+}
+
+@code {
+    [Inject] public required ISecureStorage SecureStorage { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> OnDarkModeChanged { get; set; }
+
+    #region Theme
+    private bool isDarkMode;
+    public bool IsDarkMode
+    {
+        get => isDarkMode;
+        set
+        {
+            if (isDarkMode != value)
+            {
+                isDarkMode = value;
+                OnDarkModeChanged.InvokeAsync(isDarkMode);
+            }
+        }
+    }
+
+    private async Task SetThemeMode(bool isDarkMode)
+    {
+        IsDarkMode = isDarkMode;
+        await SecureStorage.SetValueAsync("THEME_ISDARKMODE", isDarkMode ? "true" : "false");
+        StateHasChanged();
+    }
+    #endregion
+
+    protected override async Task OnInitializedAsync()
+    {
+        var darkMode = await SecureStorage.GetValueAsync("THEME_ISDARKMODE");
+        if (!string.IsNullOrEmpty(darkMode))
+        {
+            if (bool.TryParse(darkMode, out bool result))
+            {
+                IsDarkMode = result;
+            }
+            else
+            {
+                IsDarkMode = false;
+            }
+        }
+        else
+        {
+            IsDarkMode = false;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>MudHybrid.Client</Name>
+    <Description>Client for MAUI Hybrid &amp; MudBlazor</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>MudHybrid.Client</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="MudHybrid.Client.csproj" File="MudHybrid.Client.csproj" ReplaceParameters="true">
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="launchSettings.json">launchSettings.json</ProjectItem>
+      </Folder>
+      <Folder Name="wwwroot" TargetFolderName="wwwroot">
+        <ProjectItem ReplaceParameters="true" TargetFileName="app.css">app.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="index.html">index.html</ProjectItem>
+      </Folder>
+      <Folder Name="Components" TargetFolderName="Components">
+        <ProjectItem ReplaceParameters="false" TargetFileName="_Imports.razor">_Imports.razor</ProjectItem>
+      </Folder>
+      <Folder Name="Platforms" TargetFolderName="Platforms">
+        <Folder Name="Android" TargetFolderName="Android">
+          <Folder Name="Resources" TargetFolderName="Resources">
+            <Folder Name="values" TargetFolderName="values">
+              <ProjectItem ReplaceParameters="true" TargetFileName="colors.xml">colors.xml</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="colors.xml">vstg0001.xml</ProjectItem>
+            </Folder>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="AndroidManifest.xml">AndroidManifest.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="MainActivity.cs">MainActivity.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="MainApplication.cs">MainApplication.cs</ProjectItem>
+        </Folder>
+        <Folder Name="iOS" TargetFolderName="iOS">
+          <ProjectItem ReplaceParameters="true" TargetFileName="AppDelegate.cs">AppDelegate.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Info.plist">Info.plist</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+        </Folder>
+        <Folder Name="MacCatalyst" TargetFolderName="MacCatalyst">
+          <ProjectItem ReplaceParameters="true" TargetFileName="AppDelegate.cs">AppDelegate.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Entitlements.plist">Entitlements.plist</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Info.plist">Info.plist</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Tizen" TargetFolderName="Tizen">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Main.cs">Main.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="tizen-manifest.xml">tizen-manifest.xml</ProjectItem>
+        </Folder>
+        <Folder Name="Windows" TargetFolderName="Windows">
+          <ProjectItem ReplaceParameters="false" TargetFileName="app.manifest">app.manifest</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml">App.xaml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml.cs">App.xaml.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Package.appxmanifest">Package.appxmanifest</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Resources" TargetFolderName="Resources">
+        <Folder Name="AppIcon" TargetFolderName="AppIcon">
+          <ProjectItem ReplaceParameters="false" TargetFileName="appicon.svg">appicon.svg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="appicon.svg">vstg0002.svg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="appiconfg.svg">appiconfg.svg</ProjectItem>
+        </Folder>
+        <Folder Name="Fonts" TargetFolderName="Fonts">
+          <ProjectItem ReplaceParameters="false" TargetFileName="OpenSans-Regular.ttf">OpenSans-Regular.ttf</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="OpenSans-Regular.ttf">vstg0003.ttf</ProjectItem>
+        </Folder>
+        <Folder Name="Images" TargetFolderName="Images">
+          <ProjectItem ReplaceParameters="false" TargetFileName="dotnet_bot.svg">dotnet_bot.svg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="dotnet_bot.svg">vstg0004.svg</ProjectItem>
+        </Folder>
+        <Folder Name="Raw" TargetFolderName="Raw">
+          <ProjectItem ReplaceParameters="true" TargetFileName="AboutAssets.txt">AboutAssets.txt</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="AboutAssets.txt">vstg0005.txt</ProjectItem>
+        </Folder>
+        <Folder Name="Splash" TargetFolderName="Splash">
+          <ProjectItem ReplaceParameters="false" TargetFileName="splash.svg">splash.svg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="splash.svg">vstg0006.svg</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services">
+        <ProjectItem ReplaceParameters="true" TargetFileName="PlatformFactor.cs">PlatformFactor.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="PreferencesFactor.cs">PreferencesFactor.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SecureStorageService.cs">SecureStorageService.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml">App.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml.cs">App.xaml.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MainPage.xaml">MainPage.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MainPage.xaml.cs">MainPage.xaml.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MauiProgram.cs">MauiProgram.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="StartupExtensions.cs">StartupExtensions.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

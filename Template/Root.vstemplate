@@ -1,0 +1,29 @@
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+   <TemplateData>
+     <Name>MAUI Hybrid App with MudBlazor</Name>
+     <Description>MAUI Hybrid App with MudBlazor Solution Template</Description>
+     <ProjectType>CSharp</ProjectType>
+     <ProjectSubType>
+     </ProjectSubType>
+     <SortOrder>1000</SortOrder>
+     <CreateNewFolder>true</CreateNewFolder>
+     <DefaultName>MudHybrid</DefaultName>
+     <ProvideDefaultName>true</ProvideDefaultName>
+     <LocationField>Enabled</LocationField>
+     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+     <Icon>__TemplateIcon.ico</Icon>
+   </TemplateData>
+   <TemplateContent>
+     <ProjectCollection>
+       <ProjectTemplateLink ProjectName="$projectname$.Client" CopyParameters="true">
+         MudHybrid.Client\MudHybrid.Client.vstemplate
+       </ProjectTemplateLink>
+       <ProjectTemplateLink ProjectName="$projectname$.Shared" CopyParameters="true">
+         MudHybrid.Shared\MudHybrid.Shared.vstemplate
+       </ProjectTemplateLink>
+       <ProjectTemplateLink ProjectName="$projectname$.Web" CopyParameters="true">
+         MudHybrid.Web\MudHybrid.Web.vstemplate
+       </ProjectTemplateLink>
+     </ProjectCollection>
+   </TemplateContent>
+ </VSTemplate>

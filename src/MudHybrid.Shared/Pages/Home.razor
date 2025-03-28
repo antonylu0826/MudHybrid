@@ -1,0 +1,21 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<p>
+    Platform: @PlatformFactor.GetPlatform()
+</p>
+
+<p>
+    DeviceIdom: @PlatformFactor.GetDeviceIdom()
+</p>
+
+@code {
+
+    [Inject] public required IPlatformFactor PlatformFactor { get; set; }
+
+}

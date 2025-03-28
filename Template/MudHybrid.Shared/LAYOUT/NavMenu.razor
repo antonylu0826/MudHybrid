@@ -1,0 +1,29 @@
+﻿@implements IDisposable
+@inject NavigationManager NavManager
+
+<MudNavMenu Style="display: flex; flex-flow: column; height: inherit;">
+    <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
+
+</MudNavMenu>
+
+@code {
+    private string? currentUrl;
+
+    protected override async Task OnInitializedAsync()
+    {
+        currentUrl = NavManager.ToBaseRelativePath(NavManager.Uri);
+        NavManager.LocationChanged += OnLocationChanged;
+        await base.OnInitializedAsync();
+    }
+
+    private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        currentUrl = NavManager.ToBaseRelativePath(e.Location);
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        NavManager.LocationChanged -= OnLocationChanged;
+    }
+}
